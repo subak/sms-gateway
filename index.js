@@ -54,6 +54,6 @@ define(['ws', 'rxjs'], (WebSocket, Rx) => class WebSocketRx {
   }
 
   error() {
-    console.error('ari.error', this._numErrors);
+    console.error('channel.error', this._numErrors);
   }
 });
