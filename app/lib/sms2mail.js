@@ -1,6 +1,7 @@
 define(['fs'], (fs) => class SMS2Mail {
-  constructor (sms, sendMailPath) {
+  constructor (sms, sendMailPath, mailTo) {
     this.sendMailPath = sendMailPath;
+    this.mailTo = mailTo;
     sms.subscribe(this.mail.bind(this))
   }
 
@@ -10,7 +11,7 @@ define(['fs'], (fs) => class SMS2Mail {
       subject = ``,
       body =
         `From: ${caller} <${from}>
-To: notify@subak.jp
+To: ${this.mailTo}
 Subject: SMS from ${caller}
 Reply-To: ${caller} <${from}>
 Content-Type: text/plain;charset="UTF-8"

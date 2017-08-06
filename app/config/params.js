@@ -7,6 +7,7 @@ define(['urijs'], (URI) => {
     amiUri: amiUri,
     ariEventsUrl: process.env.ARI_EVENTS_URL,
     inboxArgs: JSON.parse(process.env.INBOX_ARGS),
-    sendmailPath: process.env.SENDMAIL_PATH
+    sendmailPath: process.env.SENDMAIL_PATH,
+    mailTo: process.env.MAIL_TO
   }
 });

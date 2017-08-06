@@ -11,3 +11,4 @@ services:
       ARI_EVENTS_URL:
       INBOX_ARGS:
       SENDMAIL_PATH:
+      MAIL_TO:
