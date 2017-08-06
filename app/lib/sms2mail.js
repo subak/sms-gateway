@@ -1,6 +1,6 @@
 define(['fs'], (fs) => class SMS2Mail {
-  constructor (sms, sendMailPath, mailTo) {
-    this.sendMailPath = sendMailPath;
+  constructor (sms, sendmailPath, mailTo) {
+    this.sendmailPath = sendmailPath;
     this.mailTo = mailTo;
     sms.subscribe(this.mail.bind(this))
   }
@@ -19,6 +19,6 @@ Content-Transfer-Encoding: base64
 
 ${data.value}`;
 
-    fs.writeFile(this.sendMailPath, body);
+    fs.writeFile(`${this.sendmailPath}/${+new Date}`, body);
   }
 });

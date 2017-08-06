@@ -8,8 +8,6 @@ define(['util', 'mailparser'], (util, mailparser) => class Mail2SMS {
         .then(console.log.bind(console)));
 
     imap.on('new', this.onNew.bind(this));
-
-    imap.connect();
   }
   
   onNew (mail) {
