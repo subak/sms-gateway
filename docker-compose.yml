@@ -1,1 +1,10 @@
 version: "2"
+
+services:
+  app:
+    build:
+      context: .
+      args:
+        NODE_ENV: development
+    environment:
+      NODE_ENV: development

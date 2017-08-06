@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "ws": "2.3.1",
+    "node-fetch": "1.7.0",
+    "requirejs": "2.3.3",
+    "rxjs": "5.4.0",
+    "asterisk-manager": "0.1.16",
+    "urijs": "1.18.10",
+    "inbox": "1.1.59",
+    "mailparser": "2.0.5"
+  },
+  "scripts": {
+    "start": "node app/main"
+  }
+}
