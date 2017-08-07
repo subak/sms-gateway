@@ -6,7 +6,7 @@ define(['fs'], (fs) => class SMS2Mail {
   }
 
   mail (data) {
-    const caller = data.channel.caller.number,
+    const caller = data.channel.caller.number.replace(/^0([789]0)/, '+81$1'),
       from = `sms${caller}@tk84.jp`,
       subject = ``,
       body =
