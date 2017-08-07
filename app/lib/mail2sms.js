@@ -21,7 +21,7 @@ define(['util', 'mailparser'], (util, mailparser) => class Mail2SMS {
       .then(args => {
         let headers = args[0],
           data = args[1],
-          number = headers.get('to').value[0].name,
+          number = headers.get('to').value[0].address.replace(/^sms/, '').replace(/@[^@]+$/, ''),
           message = data.text;
 
         this.sms(number,message);
